@@ -1,321 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context=".ui.activities.MainActivity"
-                android:orientation="vertical"
-                android:nestedScrollingEnabled="true"
-                android:visibility="visible"
-                android:transitionGroup="true">
+
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activities.MainActivity"
+        >
 
 
     <LinearLayout
-        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-
-        android:id="@+id/L0"
-        android:background="#676767"
-        android:gravity="center">
+        android:background="@color/grey"
+        android:focusable="false">
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/L1">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView"
-                android:enabled="false"
-                android:layout_columnWeight="0.25"
-                android:textAlignment="center"
-                android:textSize="24dp"
-                android:visibility="visible"
-                android:layout_weight="0.25"
-                android:textColor="#FFFFFF"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView2"
-                android:layout_columnWeight="0.5"
-                android:textAlignment="center"
-                android:textSize="24dp"
-                android:layout_weight="0.5"
-                android:textColor="#FFFFFF"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText"
+                    android:text="5"
+                    android:textColor="#FFFFFF"
+                    android:layout_weight="0.5"
+                    android:textSize="25dp"
+                    android:gravity="bottom|center"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView3"
-                android:layout_columnWeight="0.25"
-                android:textAlignment="center"
-                android:textSize="24dp"
-                android:layout_weight="0.25"
-                android:textColor="#FFFFFF"/>
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText2"
+                    android:text="Рейтинг"
+                    android:textColor="#FFFFFF"
+                    android:layout_weight="0.5"
+                    android:gravity="top|center"/>
+            </LinearLayout>
         </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/line_size"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_light"
+            android:layout_marginTop="@dimen/spacing_normal_16"
+            android:layout_marginBottom="@dimen/spacing_normal_16"/>
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/L2"
-            android:layout_below="@id/L1">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            >
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Рейтинг"
-                android:id="@+id/textView4"
-                android:layout_columnWeight="0.25"
-                android:textAlignment="center"
-                android:layout_weight="0.25"
-                android:textColor="#FFFFFF"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Написано строк кода"
-                android:id="@+id/textView5"
-                android:layout_columnWeight="0.5"
-                android:textAlignment="center"
-                android:layout_weight="0.5"
-                android:textColor="#FFFFFF"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText3"
+                    android:layout_weight="0.5"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="5"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Проектов"
-                android:id="@+id/textView6"
-                android:layout_columnWeight="0.25"
-                android:textAlignment="center"
-                android:layout_weight="0.25"
-                android:textColor="#FFFFFF"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText4"
+                    android:textColor="#FFFFFF"
+                    android:layout_weight="0.5"
+                    android:text="Написано строк кода"
+                    android:gravity="top|center"/>
+            </LinearLayout>
         </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/line_size"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_light"
+            android:layout_marginTop="@dimen/spacing_normal_16"
+            android:layout_marginBottom="@dimen/spacing_normal_16"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText5"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="5"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp"
+                    android:layout_weight="0.5"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText6"
+                    android:text="Проектов"
+                    android:textColor="#FFFFFF"
+                    android:gravity="top|center"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/L0">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_call_black_24dp"/>
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:id="@+id/L3"
-            android:weightSum="1"
-            android:layout_below="@+id/L0"
-            android:contextClickable="true">
-
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_call_black_24dp"
-                android:contextClickable="true">
-            </ImageView>
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:id="@+id/editText"
-                android:inputType="phone"
-                android:hint="Мобильный"
-                android:layout_weight="1"
-                android:contextClickable="true"/>
-
-
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_phone_in_talk_black_24dp"
-                android:contextClickable="true">
-            </ImageView>
-
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_large_72"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/spacing_normal_16">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="Мобильный"/>
+            </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:background="@color/grey_light"
-            android:layout_marginLeft="@dimen/spacing_larger_72"
-            android:layout_below="@+id/L3"
-            android:id="@+id/view1"
-            android:contextClickable="true">
-        </View>
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_phone_in_talk_black_24dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_larger_72"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_mail_black_24dp"/>
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:id="@+id/L4"
-            android:weightSum="1"
-            android:layout_below="@+id/view1"
-            android:contextClickable="true">
-
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_email_black_24dp">
-            </ImageView>
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:id="@+id/editText1"
-                android:hint="E-mail"
-                android:layout_weight="1"
-                android:inputType="textEmailAddress"/>
-
-
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_send_black_24dp"
-                >
-            </ImageView>
-
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_large_72"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/spacing_normal_16">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="E-mail"/>
+            </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:background="@color/grey_light"
-            android:layout_marginLeft="@dimen/spacing_larger_72"
-            android:layout_below="@+id/L4"
-            android:id="@+id/view2"
-            android:contextClickable="true">
-        </View>
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_send_black_24dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_larger_72"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_visibility_black_24dp"/>
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:id="@+id/L5"
-            android:weightSum="1"
-            android:layout_below="@+id/view2"
-            android:contextClickable="true">
-
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_language_black_24dp"
-                android:contextClickable="true">
-            </ImageView>
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:id="@+id/editText2"
-                android:hint="Профиль в VK"
-                android:layout_weight="1"
-                android:inputType="text"
-                android:contextClickable="true"/>
-
-
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_remove_red_eye_black_24dp"
-                android:contextClickable="true">
-            </ImageView>
-
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_large_72"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/spacing_normal_16">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Профиль VK"/>
+            </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:background="@color/grey_light"
-            android:layout_marginLeft="@dimen/spacing_larger_72"
-            android:layout_below="@+id/L5"
-            android:id="@+id/view3"
-            android:contextClickable="true">
-        </View>
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_visibility_black_24dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_larger_72"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_visibility_black_24dp"/>
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:id="@+id/L6"
-            android:weightSum="1"
-            android:layout_below="@+id/view3"
-            android:contextClickable="true">
-
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_work_black_24dp">
-            </ImageView>
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:id="@+id/editText3"
-                android:inputType="text"
-                android:hint="Репозиторий"
-                android:layout_weight="1"/>
-
-
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_remove_red_eye_black_24dp"
-                >
-            </ImageView>
-
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_large_72"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/spacing_normal_16">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Репозиторий"/>
+            </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:background="@color/grey_light"
-            android:layout_marginLeft="@dimen/spacing_larger_72"
-            android:layout_below="@+id/L6"
-            android:id="@+id/view4"
-            android:contextClickable="true">
-        </View>
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_visibility_black_24dp"/>
+    </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_larger_72"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_account_circle_black_24dp"/>
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:id="@+id/L7"
-            android:weightSum="1"
-            android:layout_below="@+id/view4"
-            android:contextClickable="true">
-
-            <ImageView
-                style="@style/icon.left"
-                android:src="@drawable/ic_account_circle_black_24dp">
-            </ImageView>
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:id="@+id/editText4"
-                android:hint="О себе"
-                android:layout_weight="1"
-                android:inputType="text"/>
-
-
-            <ImageView
-                style="@style/icon.right"
-                android:src="@drawable/ic_remove_red_eye_black_24dp"
-                >
-            </ImageView>
-
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_large_72"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/spacing_normal_16">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="О себе"/>
+            </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:background="@color/grey_light"
-            android:layout_marginLeft="@dimen/spacing_larger_72"
-            android:layout_below="@+id/L7"
-            android:id="@+id/view5"
-            android:contextClickable="true">
-        </View>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/grey_light"
+        android:layout_marginLeft="@dimen/spacing_larger_72"/>
 
     </LinearLayout>
 
-</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

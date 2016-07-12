@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bg">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/login_win"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="110dp"
+                android:layout_marginBottom="250dp"
+                android:layout_marginLeft="@dimen/spacing_larger_72"
+                android:layout_marginRight="@dimen/spacing_larger_72">
+
+                <LinearLayout
+                    android:id="@+id/login_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium_32"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="24dp"
+                        android:background="@color/color_accent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medial_24"
+                        android:text="ВОЙТИ"
+                        android:textSize="@dimen/size_small_24"
+                        android:textColor="@color/color_accent"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_medial_24"
+                    android:layout_marginRight="@dimen/spacing_medial_24"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/login_mail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:hint="E-mail"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_medial_24"
+                    android:layout_marginRight="@dimen/spacing_medial_24"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/login_pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="Пароль"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_medium_32"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/spacing_normal_16"
+                    android:layout_marginLeft="@dimen/spacing_large_56"
+                    android:layout_marginRight="@dimen/spacing_large_56"
+                    android:gravity="center"
+                    android:text="ВОЙТИ"
+                    android:background="@color/color_accent"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Забыли пароль?"
+                    android:paddingBottom="@dimen/spacing_normal_16"
+                    android:paddingTop="@dimen/spacing_medium_32"
+                    android:gravity="bottom|center"/>
+
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/login_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_create_black_24dp"
+                app:rippleColor="@color/color_accent"
+                app:layout_anchor="@id/login_title"
+                app:layout_anchorGravity="right|center"/>
+
+        </android.support.design.widget.CoordinatorLayout>
+    </GridLayout>
+</FrameLayout>
